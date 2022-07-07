@@ -18,6 +18,8 @@ gem 'puma', '~> 5.0'
 
 # gem 'devise_token_auth'
 
+gem 'devise'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

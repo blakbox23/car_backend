@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  namespace :api do
+  # devise_for :users
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :vehicles, only: [:index, :show, :destroy]
+      resources :sessions, only: [:create, :destroy]
     end
   end
 
