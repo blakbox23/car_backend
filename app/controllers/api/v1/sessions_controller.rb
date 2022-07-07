@@ -6,7 +6,7 @@ class Api::V1::SessionsController < ApplicationController
   
       if @user
         # token = encode_token({ user_id: @user.id })
-        render json: { user: @user.username, email: @user.email}, status: :ok
+        render json: { user: @user.username, email: @user.email, token: @user.authentication_token}, status: :ok
       else
         render json: { error: 'Incorrect user' }, status: :not_found
       end
