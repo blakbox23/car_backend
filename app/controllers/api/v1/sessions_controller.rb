@@ -11,6 +11,10 @@ class Api::V1::SessionsController < ApplicationController
         render json: { error: 'Incorrect user' }, status: :not_found
       end
     end
+
+    # def destroy
+    #   @user.authentication_token = nil
+    # end
   
     private
   
